@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3398170a-31b3-4836-aa92-90acc5128223" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/service/TodoHardcodedService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Certificate-Udemy-Course.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/todo/HelloWorldService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/todo/TodoDataService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todo/TodoDataService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authenticatedRoute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authenticationService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/welcome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/basic/auth/AuthenticationBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/basic/auth/BasicAuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/basic/auth/SpringSecurityConfigurationBasicAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/BcryptEncoderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/RestfulWebServicesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/helloworld/HelloWorldBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/helloworld/HelloWorldController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/JWTWebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/JwtInMemoryUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/JwtTokenAuthorizationOncePerRequestFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/JwtTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/JwtUnAuthorizedResponseAuthenticationEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/JwtUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/resource/AuthenticationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/resource/JwtAuthenticationRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/resource/JwtTokenRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/jwt/resource/JwtTokenResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/todo/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/todo/TodoHardcodedService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/todo/TodoJpaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/todo/TodoJpaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/java/com/todoapp/rest/webservices/restfulwebservices/todo/TodoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/src/test/java/com/todoapp/rest/webservices/restfulwebservices/RestfulWebServicesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/src/test/java/com/todoapp/rest/RestfulWebServicesApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///usr/local/Cellar/go/1.17.1/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1zCF5CWZm0j2p3dzg380AGudhsP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3398170a-31b3-4836-aa92-90acc5128223" name="Default Changelist" comment="" />
+      <created>1633643978200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633643978200</updated>
+      <workItem from="1633643982708" duration="5234000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
