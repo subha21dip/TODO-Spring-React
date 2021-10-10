@@ -1,19 +1,23 @@
 package com.todoapp.rest.controller;
 
+import com.todoapp.rest.exception.PageOutOfRangeException;
 import com.todoapp.rest.exception.TaskNotFoundException;
 import com.todoapp.rest.exception.ValidationException;
 import com.todoapp.rest.model.ErrorResponseBody;
 import com.todoapp.rest.model.Task;
+import com.todoapp.rest.model.TaskListRange;
 import com.todoapp.rest.service.TodoHardcodedService;
 import com.todoapp.rest.validator.TodoValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +51,50 @@ public class TaskController {
         }
     }
 
+    @GetMapping("/users/{username}/todos/page/{pageNumber}")
+    public ResponseEntity<?> getTodosByPage(@PathVariable String username, @PathVariable Integer pageNumber,
+                                            @RequestParam(value = "pageSize", required = true) Integer pageSize,
+                                            HttpServletRequest req){
+        logger.info("Got get request for tasks for user : " + username + " with page number : " + pageNumber + " using API : users/{username}/todos/{pageNumber}");
+        try {
+            if(pageNumber < 1 || pageSize < 1)
+                throw new PageOutOfRangeException("Page number and page size should be more than 1");
+            List<Task> taskList = todoService.findAll();
+            if (taskList.isEmpty())
+                throw new TaskNotFoundException("No task found");
+            int totalPages = (int)Math.ceil(taskList.size()/pageSize);
+            if(totalPages < 1)
+                throw new TaskNotFoundException("No pages found");
+            int index = (pageNumber-1)*pageSize;
+            int maxIndex = pageNumber*pageSize;
+            List<Task> tasksByPage = new ArrayList<Task>();
+            try {
+                while ((index < maxIndex) && (maxIndex <= taskList.size())) {
+                    tasksByPage.add(taskList.get(index));
+                    index++;
+                }
+            }catch (ArrayIndexOutOfBoundsException ae){
+                throw new PageOutOfRangeException("Task number is bigger than the total tasks present.");
+            }
+            String prevLink = null;
+            String nextLink = null;
+            if(pageNumber > 1)
+                prevLink = ServletUriComponentsBuilder.fromCurrentRequest().replacePath("/api/v1/users/" + username + "/todos/page/" + (pageNumber - 1) ).toUriString();
+            if(maxIndex < taskList.size())
+                nextLink = ServletUriComponentsBuilder.fromCurrentRequest().replacePath("/api/v1/users/" + username + "/todos/page/" + (pageNumber + 1)).toUriString();
+
+            TaskListRange responseList = new TaskListRange(prevLink, nextLink, tasksByPage, totalPages);
+
+            return new ResponseEntity<>(responseList, HttpStatus.OK);
+        }
+        catch (Exception e){
+            List<Object> responseList = new ArrayList<Object>();
+            responseList.add(new ErrorResponseBody(FAILURE_STATUS, e.getMessage()));
+            logger.error("Got exception : " + e.getMessage() + " when fetching tasks with page number : " + pageNumber);
+            return new ResponseEntity<>( responseList, HttpStatus.NO_CONTENT);
+        }
+    }
+
     @GetMapping("/users/{username}/todos/{id}")
     public ResponseEntity<?> getTodo(@PathVariable String username, @PathVariable long id){
         logger.info("Got get request for the task for user :" + username + " with id: "+ id + "using API : users/{username}/todos/{id}");
@@ -63,9 +111,9 @@ public class TaskController {
     }
 
     @GetMapping("/users/{username}/todos/filter")
-    public ResponseEntity<List<?>> getTodoFilter(@PathVariable String username, @RequestParam(value = "task", required = false) String name,
+    public ResponseEntity<List<?>> getTodoByFilter(@PathVariable String username, @RequestParam(value = "task", required = false) String name,
                                                  @RequestParam(value = "desc", required = false) String description){
-        logger.info("Got get request for the task for user :" + username + " with name: "+ name + " and description " + description +"using API : users/{username}/todos/filter");
+        logger.info("Got get request for the task for user :" + username + " with name: "+ name + " and description " + description +" using API : users/{username}/todos/filter");
         try {
             if(name==null && description== null)
                 throw new ValidationException("Both name and description is null for filter");

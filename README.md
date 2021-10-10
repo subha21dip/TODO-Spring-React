@@ -38,8 +38,20 @@ OR with maven
 run maven clean install
 mvn spring-boot:run
 
+Design
+------------
+React based UI application connecting with Spring boot based rest api platform through http. CORS is enabled in server side only for port 4200 where the UI client is running.
 
 API Documentation
 ------------------
+
+Find API call details in Resources folder.
+
+GetAll - get all existing tasks.
+GetByID - get an unique task with id.
+GetTaskWithFilter - find tasks with provided filter as task name and description
+GetTaskWithPagination - Get tasks for a particular page with link to previous and next apge.
+CreateNewTask - Post call to cretae a new task.
+UpdateTask - PUT call to update an existing task.
 
 

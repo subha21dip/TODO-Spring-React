@@ -42,7 +42,7 @@ public class TodoHardcodedService {
     }
 
     public Task save(Task task) {
-        if(task.getId()==-1 || task.getId()==0){
+        if(task.getId() == null || task.getId()==-1 || task.getId()==0){
             task.setId(++idCounter);
             tasks.add(task);
         }
@@ -58,20 +58,20 @@ public class TodoHardcodedService {
         List<Task> taskList = new ArrayList<>();
         if(name == null){
             for(Task task : tasks){
-                if(task.getDescription().equals(description)){
+                if(task.getDescription().equals(description.trim())){
                     taskList.add(task);
                 }
             }
         }
         else if(description == null){
             for(Task task : tasks){
-                if(task.getTask().equals(name)){
+                if(task.getTask().equals(name.trim())){
                     taskList.add(task);
                 }
             }
         }else{
             for(Task task : tasks){
-                if(task.getDescription().equals(description) && task.getTask().equals(name)){
+                if(task.getDescription().equals(description.trim()) && task.getTask().equals(name.trim())){
                     taskList.add(task);
                 }
             }

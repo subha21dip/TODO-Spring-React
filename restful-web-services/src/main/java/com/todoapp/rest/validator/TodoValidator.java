@@ -32,21 +32,9 @@ public class TodoValidator {
             return false;
         }
     }
-    public boolean validateDueDate(Date dueDate){
-        LocalDate localDate = LocalDate.now(ZoneId.systemDefault());
-        LocalDate inputDate = dueDate.toInstant()
-                .atZone(ZoneId.systemDefault())
-                .toLocalDate();
-       if (inputDate.isBefore(localDate)) {
-           logger.debug("Due date is in the past.");
-           return false;
-       }
-       else
-           return true;
-    }
 
     public boolean validateNewTask(Task task){
-        if(validateTaskName(task.getTask()) && validateTaskDescription(task.getDescription()) && validateDueDate(task.getTargetDate()))
+        if(validateTaskName(task.getTask()) && validateTaskDescription(task.getDescription()))
             return true;
         else
             return false;
